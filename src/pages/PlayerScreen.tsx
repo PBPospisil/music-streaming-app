@@ -11,10 +11,10 @@ const PlayerScreen = ({ route }: PlayerScreenProps) => {
       await TrackPlayer.reset();
       await TrackPlayer.add({
         id: track.id,
-        url: track.url,  // The audio stream URL
+        url: track.url,
         title: track.title,
         artist: track.artist,
-        artwork: track.artwork,  // Optional album artwork
+        artwork: track.artwork,
       });
       TrackPlayer.play();
     };

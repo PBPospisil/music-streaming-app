@@ -2,11 +2,26 @@ import { RouteProp } from "@react-navigation/native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 export type Track = {
-    id: string | never,
+    id: string,
     url: string,
     title: string,
     artist: string,
     artwork: string, 
+}
+
+export type Playlist = {
+    id: string,
+    name: string,
+    tracks: Track[],
+    createdOn: Date,
+    updatedOn: Date
+}
+
+export type User = {
+    id: string,
+    name: string,
+    email: string,
+    playlists: Playlist[],
 }
 
 export type LoginScreenProps = NativeStackScreenProps<RootStackParamList, 'Login'>
