@@ -16,8 +16,8 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
         password
       });
       const { token } = response.data;
-      await AsyncStorage.setItem('token', token); // Store JWT token
-      navigation.navigate('Home'); // Navigate to Home on success
+      await AsyncStorage.setItem('token', token);
+      navigation.navigate('Home');
     } catch (error) {
       setErrorMessage('Invalid credentials');
     }
